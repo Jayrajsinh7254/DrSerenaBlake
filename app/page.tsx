@@ -692,7 +692,7 @@ Compassionate, evidence-based therapy in Los Angeles
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 sm:py-16">
+{/*       <footer className="bg-gray-800 text-white py-12 sm:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12 scroll-animate opacity-0 translate-y-8">
             <div className="sm:col-span-2 lg:col-span-1">
@@ -739,7 +739,53 @@ Compassionate, evidence-based therapy in Los Angeles
             </p>
           </div>
         </div>
-      </footer>
+      </footer> */}
+        <footer className="bg-gray-800 text-white py-12">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="font-serif font-medium text-xl mb-4">Dr. Serena Blake</h3>
+            <p className="text-gray-300 leading-relaxed">
+              Licensed Clinical Psychologist providing compassionate, evidence-based therapy in Los Angeles.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-medium mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-300">
+              <div>1287 Maplewood Drive</div>
+              <div>Los Angeles, CA 90026</div>
+              <div>(323) 555-0192</div>
+              <div>serena@blakepsychology.com</div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-medium mb-4">Office Hours</h4>
+            <div className="space-y-2 text-gray-300">
+              <div>In-person: Tue & Thu</div>
+              <div>10:00 AM - 6:00 PM</div>
+              <div className="mt-3">Virtual: Mon, Wed & Fri</div>
+              <div>1:00 PM - 5:00 PM</div>
+            </div>
+             {/* <Button
+              onClick={scrollToTop}
+              variant="outline"
+              size="sm"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/25 group"
+            >
+              <ArrowUp className="w-4 h-4 mr-2 group-hover:-translate-y-1 transition-transform duration-300" />
+              Back to Top
+            </Button> */}
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Dr. Serena Blake Psychology. All rights reserved.</p>
+          <p className="mt-2 text-sm">Licensed Clinical Psychologist • California License #PSY12345</p>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 }
