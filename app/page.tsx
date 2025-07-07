@@ -239,19 +239,19 @@ Compassionate, evidence-based therapy in Los Angeles
                 </p>
                 <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="text-green-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+                  <CheckCircle className="text-teal-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
                   <span className="text-sm sm:text-base text-gray-700">Evidence-based therapeutic approaches</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="text-green-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+                  <CheckCircle className="text-teal-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
                   <span className="text-sm sm:text-base text-gray-700">Cognitive-behavioral therapy (CBT)</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="text-green-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+                  <CheckCircle className="text-teal-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
                   <span className="text-sm sm:text-base text-gray-700">Mindfulness-based interventions</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="text-green-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+                  <CheckCircle className="text-teal-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
                   <span className="text-sm sm:text-base text-gray-700">Trauma-informed care</span>
                 </div>
               </div>
