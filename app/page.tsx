@@ -428,7 +428,7 @@ Compassionate, evidence-based therapy in Los Angeles
           <div className="scroll-animate opacity-0 translate-y-8">
             <Accordion type="single" collapsible className="space-y-4 sm:space-y-6">
               <AccordionItem value="insurance" className="border border-gray-200 px-4 sm:px-8 py-2">
-                <AccordionTrigger className="text-left text-base sm:text-lg font-serif font-medium text-gray-900 hover:text-primary py-4 sm:py-6">
+                <AccordionTrigger className="text-left text-base sm:text-lg font-serif font-medium text-gray-800 hover:text-teal-600 transition-colors">
                   Do you accept insurance?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 pt-4 pb-6 leading-relaxed text-sm sm:text-base">
