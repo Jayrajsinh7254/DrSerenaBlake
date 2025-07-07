@@ -104,20 +104,21 @@ export default function Home() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrollY > 50 ? 'bg-white shadow-lg' : 'bg-transparent'
       }`}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 sm:h-20">
-            <div className="text-xl sm:text-2xl font-light text-gray-800">
-              Dr. Serena Blake
-            </div>
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-3 sm:py-4">
+          <div className="font-serif font-medium text-lg sm:text-xl text-gray-900 truncate">
+            Dr. Serena Blake
+          </div>
             
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-6 lg:space-x-8">
-              <a href="#home" className="text-gray-600 hover:text-teal-600 transition-colors duration-300 font-light">Home</a>
-              <a href="#about" className="text-gray-600 hover:text-teal-600 transition-colors duration-300 font-light">About</a>
-              <a href="#services" className="text-gray-600 hover:text-teal-600 transition-colors duration-300 font-light">Services</a>
-              <a href="#faq" className="text-gray-600 hover:text-teal-600 transition-colors duration-300 font-light">FAQ</a>
-              <a href="#contact" className="text-gray-600 hover:text-teal-600 transition-colors duration-300 font-light">Contact</a>
-            </div>
+            
+            <b><div className="hidden md:flex space-x-6 lg:space-x-8">
+              <a href="#home" className="text-gray-700 hover:text-primary transition-colors text-sm lg:text-base">Home</a>
+              <a href="#about" className="text-gray-700 hover:text-primary transition-colors text-sm lg:text-base">About</a>
+              <a href="#services" className="text-gray-700 hover:text-primary transition-colors text-sm lg:text-base">Services</a>
+              <a href="#faq" className="text-gray-700 hover:text-primary transition-colors text-sm lg:text-base">FAQ</a>
+              <a href="#contact" className="text-gray-700 hover:text-primary transition-colors text-sm lg:text-base">Contact</a>
+            </div></b>
 
             {/* Mobile Menu Button */}
             <button 
@@ -161,7 +162,7 @@ export default function Home() {
           <div 
             className="absolute inset-0 opacity-5"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")`,
             }}
           ></div>
         </div>
@@ -173,10 +174,15 @@ export default function Home() {
               transform: `translateY(${scrollY * 0.1}px)`,
             }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-light text-gray-800 mb-4 sm:mb-6 leading-tight tracking-wide">
+            {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-light text-gray-800 mb-4 sm:mb-6 leading-tight tracking-wide">
               Find Your Path to
               <span className="block text-teal-600 font-normal">Healing & Growth</span>
-            </h1>
+            </h1> */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium text-gray-900 mb-4 sm:mb-6 leading-tight max-w-4xl mx-auto">
+            Find Your Path to
+            <span className="text-green-600 text-primary block">Healing & Growth</span>
+          </h1>
+
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-12 font-light leading-relaxed max-w-3xl mx-auto px-4">
               Dr. Serena Blake, PsyD • Licensed Clinical Psychologist
 Compassionate, evidence-based therapy in Los Angeles
@@ -187,13 +193,22 @@ Compassionate, evidence-based therapy in Los Angeles
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Schedule Free Consultation
+           
             </Button>
+            
+
           </div>
+          
         </div>
+        <div className="text-green-600 absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <div className="text-green-600 w-5 h-8 sm:w-6 sm:h-10 border-2 border-primary rounded-full flex justify-center">
+          <div className="text-green-600 w-1 h-2 sm:h-3 bg-primary rounded-full mt-1 sm:mt-2"></div>
+        </div>
+      </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-1/4 left-4 sm:left-10 w-16 sm:w-20 h-16 sm:h-20 bg-teal-200/30 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-4 sm:right-10 w-24 sm:w-32 h-24 sm:h-32 bg-blue-200/30 rounded-full blur-xl animate-pulse delay-1000"></div>
+        <div className="text-green-600 absolute top-1/4 left-4 sm:left-10 w-16 sm:w-20 h-16 sm:h-20 bg-teal-200/30 rounded-full blur-xl animate-pulse"></div>
+        <div className="text-green-600 absolute bottom-1/4 right-4 sm:right-10 w-24 sm:w-32 h-24 sm:h-32 bg-blue-200/30 rounded-full blur-xl animate-pulse delay-1000"></div>
       </section>
 
       {/* About Section */}
@@ -205,7 +220,7 @@ Compassionate, evidence-based therapy in Los Angeles
                 {/* <h2 className="text-sm uppercase tracking-widest text-teal-600 mb-4 font-medium">
                   About Dr. Blake
                 </h2> */}
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-6 sm:mb-8 leading-tight">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-6 sm:mb-8 leading-tight font-serif font-medium text-gray-900 mb-4 sm:mb-6">
                   About Dr. Serena Blake
                 </h3>
               </div>
@@ -222,6 +237,24 @@ Compassionate, evidence-based therapy in Los Angeles
                   Dr. Blake is committed to creating a safe, supportive space for you to overcome anxiety, 
                   strengthen relationships, and heal from trauma.
                 </p>
+                <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="text-green-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-gray-700">Evidence-based therapeutic approaches</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="text-green-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-gray-700">Cognitive-behavioral therapy (CBT)</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="text-green-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-gray-700">Mindfulness-based interventions</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="text-green-600 h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-gray-700">Trauma-informed care</span>
+                </div>
+              </div>
               </div>
               
               <div className="grid grid-cols-2 gap-6 sm:gap-8 pt-6 sm:pt-8">
@@ -244,6 +277,7 @@ Compassionate, evidence-based therapy in Los Angeles
                   className="w-full shadow-2xl"
                 />
               </div>
+              
               <div className="absolute -top-4 sm:-top-8 -left-4 sm:-left-8 w-full h-full bg-teal-100 -z-10"></div>
               <div className="absolute -bottom-4 sm:-bottom-8 -right-4 sm:-right-8 w-24 sm:w-32 h-24 sm:h-32 bg-blue-100"></div>
             </div>
@@ -255,12 +289,12 @@ Compassionate, evidence-based therapy in Los Angeles
       <section id="services" className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-20 scroll-animate opacity-0 translate-y-8">
-            <h2 className="text-sm uppercase tracking-widest text-teal-600 mb-4 font-medium">
+            {/* <h2 className="text-sm uppercase tracking-widest text-teal-600 mb-4 font-medium">
               Services
-            </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-6 sm:mb-8 leading-tight">
+            </h2> */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-6 sm:mb-8 leading-tight font-serif font-medium text-gray-900 mb-4 sm:mb-6">
               Specialized Therapeutic Services
-            </h3>
+            </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto font-light">
               Evidence-based approaches tailored to your unique needs and goals
             </p>
@@ -279,8 +313,8 @@ Compassionate, evidence-based therapy in Los Angeles
               </div>
               <div className="p-6 sm:p-8">
                 <div className="flex items-center mb-4">
-                  <Brain className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600 mr-3" />
-                  <h4 className="text-lg sm:text-xl font-light text-gray-800">Anxiety & Stress Management</h4>
+                  {/* <Brain className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600 mr-3" /> */}
+                  <h4 className="text-lg sm:text-xl font-light text-gray-800 font-serif font-medium text-gray-900 mb-4 sm:mb-6">Anxiety & Stress Management</h4>
                 </div>
                 <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   Learn effective coping strategies and mindfulness techniques to manage anxiety, 
@@ -302,8 +336,8 @@ Compassionate, evidence-based therapy in Los Angeles
               </div>
               <div className="p-6 sm:p-8">
                 <div className="flex items-center mb-4">
-                  <Heart className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600 mr-3" />
-                  <h4 className="text-lg sm:text-xl font-light text-gray-800">Relationship Counseling</h4>
+                  {/* <Heart className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600 mr-3" /> */}
+                  <h4 className="text-lg sm:text-xl font-light text-gray-800 font-serif font-medium text-gray-900 mb-4 sm:mb-6">Relationship Counseling</h4>
                 </div>
                 <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   Strengthen communication, rebuild trust, and deepen intimacy in your relationships 
@@ -325,8 +359,8 @@ Compassionate, evidence-based therapy in Los Angeles
               </div>
               <div className="p-6 sm:p-8">
                 <div className="flex items-center mb-4">
-                  <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600 mr-3" />
-                  <h4 className="text-lg sm:text-xl font-light text-gray-800">Trauma Recovery</h4>
+                  {/* <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600 mr-3" /> */}
+                  <h4 className="text-lg sm:text-xl font-light text-gray-800 font-serif font-medium text-gray-900 mb-4 sm:mb-6">Trauma Recovery</h4>
                 </div>
                 <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   Heal from past traumatic experiences in a safe, supportive environment using 
@@ -339,8 +373,11 @@ Compassionate, evidence-based therapy in Los Angeles
 
           {/* Office Hours */}
           <div className="bg-white shadow-lg p-6 sm:p-12 scroll-animate opacity-0 translate-y-8">
-            <h3 className="text-xl sm:text-2xl font-light text-gray-800 mb-6 sm:mb-8 text-center">Office Hours</h3>
-            <div className="grid sm:grid-cols-2 gap-8 sm:gap-12">
+            {/* <h3 className="text-xl sm:text-2xl font-light text-gray-800 mb-6 sm:mb-8 text-center">Office Hours</h3> */}
+             <h3 className="text-xl sm:text-2xl font-serif font-medium text-gray-900 mb-4 sm:mb-6 text-center">
+              Office Hours & Availability
+            </h3>
+            {/* <div className="grid sm:grid-cols-2 gap-8 sm:gap-12">
               <div className="text-center">
                 <div className="bg-teal-50 p-6 sm:p-8 mb-4">
                   <Clock className="h-10 sm:h-12 w-10 sm:w-12 text-teal-600 mx-auto mb-4" />
@@ -356,6 +393,19 @@ Compassionate, evidence-based therapy in Los Angeles
                   <p className="text-gray-600 text-sm sm:text-base">Monday, Wednesday & Friday</p>
                   <p className="text-gray-600 text-sm sm:text-base">1:00 PM - 5:00 PM</p>
                 </div>
+              </div> */}
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 text-left">
+              <div className="bg-gray-50 p-4 sm:p-6 rounded-xl">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">In-Person Sessions</h4>
+                <p className="text-gray-600 text-sm sm:text-base">Tuesday & Thursday</p>
+                <p className="text-gray-600 text-sm sm:text-base">10:00 AM - 6:00 PM</p>
+                <p className="text-xs sm:text-sm text-gray-500 mt-2">1287 Maplewood Drive, Los Angeles, CA 90026</p>
+              </div>
+              <div className="bg-gray-50 p-4 sm:p-6 rounded-xl">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Virtual Sessions</h4>
+                <p className="text-gray-600 text-sm sm:text-base">Monday, Wednesday & Friday</p>
+                <p className="text-gray-600 text-sm sm:text-base">1:00 PM - 5:00 PM</p>
+                <p className="text-xs sm:text-sm text-gray-500 mt-2">Secure Zoom video sessions</p>
               </div>
             </div>
           </div>
@@ -366,18 +416,18 @@ Compassionate, evidence-based therapy in Los Angeles
       <section id="faq" className="py-16 sm:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-20 scroll-animate opacity-0 translate-y-8">
-            <h2 className="text-sm uppercase tracking-widest text-teal-600 mb-4 font-medium">
+            {/* <h2 className="text-sm uppercase tracking-widest text-teal-600 mb-4 font-medium">
               FAQ
-            </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-6 sm:mb-8 leading-tight">
+            </h2> */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-4 sm:mb-6">
               Frequently Asked Questions
-            </h3>
+            </h2>
           </div>
 
           <div className="scroll-animate opacity-0 translate-y-8">
             <Accordion type="single" collapsible className="space-y-4 sm:space-y-6">
               <AccordionItem value="insurance" className="border border-gray-200 px-4 sm:px-8 py-2">
-                <AccordionTrigger className="text-left text-base sm:text-lg font-light text-gray-800 hover:text-teal-600 transition-colors">
+                <AccordionTrigger className="text-left text-base sm:text-lg font-serif font-medium text-gray-900 hover:text-primary py-4 sm:py-6">
                   Do you accept insurance?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 pt-4 pb-6 leading-relaxed text-sm sm:text-base">
@@ -389,7 +439,7 @@ Compassionate, evidence-based therapy in Los Angeles
               </AccordionItem>
 
               <AccordionItem value="online" className="border border-gray-200 px-4 sm:px-8 py-2">
-                <AccordionTrigger className="text-left text-base sm:text-lg font-light text-gray-800 hover:text-teal-600 transition-colors">
+                <AccordionTrigger className="text-left text-base sm:text-lg font-serif font-medium text-gray-800 hover:text-teal-600 transition-colors">
                   Are online sessions available?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 pt-4 pb-6 leading-relaxed text-sm sm:text-base">
@@ -400,7 +450,7 @@ Compassionate, evidence-based therapy in Los Angeles
               </AccordionItem>
 
               <AccordionItem value="cancellation" className="border border-gray-200 px-4 sm:px-8 py-2">
-                <AccordionTrigger className="text-left text-base sm:text-lg font-light text-gray-800 hover:text-teal-600 transition-colors">
+                <AccordionTrigger className="text-left text-base sm:text-lg font-serif font-medium text-gray-800 hover:text-teal-600 transition-colors">
                   What is your cancellation policy?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 pt-4 pb-6 leading-relaxed text-sm sm:text-base">
@@ -411,6 +461,21 @@ Compassionate, evidence-based therapy in Los Angeles
               </AccordionItem>
             </Accordion>
           </div>
+           <div className="mt-8 sm:mt-12 text-center px-4">
+          <b><p className="text-gray-600 mb-4 text-sm sm:text-base">Still have questions?</p></b>
+          <b>
+            <p className="text-gray-900 text-sm sm:text-base">
+            Contact me at{" "}
+            <a href="mailto:serena@blakepsychology.com" className="text-teal-600 text-primary hover:underline font-medium break-all ">
+              serena@blakepsychology.com
+            </a>
+            {" "}or{" "}
+            <a href="tel:+13235550192" className="text-primary hover:underline font-medium">
+              (323) 555-0192
+            </a>
+          </p>
+          </b>
+        </div>
         </div>
       </section>
 
@@ -418,12 +483,12 @@ Compassionate, evidence-based therapy in Los Angeles
       <section id="contact" className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-20 scroll-animate opacity-0 translate-y-8">
-            <h2 className="text-sm uppercase tracking-widest text-teal-600 mb-4 font-medium">
+            {/* <h2 className="text-sm uppercase tracking-widest text-teal-600 mb-4 font-medium">
               Contact
+            </h2> */}
+           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-4 sm:mb-6">
+              Get in Touch
             </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-6 sm:mb-8 leading-tight">
-              Get In Touch
-            </h3>
             <p className="text-lg sm:text-xl text-gray-600 font-light">
               Ready to begin your journey? Let's schedule your free consultation
             </p>
@@ -432,49 +497,67 @@ Compassionate, evidence-based therapy in Los Angeles
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
             {/* Contact Info */}
             <div className="space-y-8 sm:space-y-12 scroll-animate opacity-0 translate-y-8">
+              <div className="space-y-6 sm:space-y-8">
               <div>
-                <h4 className="text-xl sm:text-2xl font-light text-gray-800 mb-6 sm:mb-8">Contact Information</h4>
+                <h3 className="text-xl sm:text-2xl font-serif font-medium text-gray-900 mb-4 sm:mb-6">
+                  Contact Information
+                </h3>
                 
-                <div className="space-y-6 sm:space-y-8">
-                  <div className="flex items-start space-x-4 sm:space-x-6">
-                    <div className="bg-teal-100 p-2 sm:p-3 rounded-full flex-shrink-0">
-                      <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600" />
-                    </div>
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <MapPin className="text-teal-600 h-5 w-5 sm:h-6 sm:w-6 text-primary mt-1 flex-shrink-0" />
+                    <b>
                     <div>
-                      <h5 className="font-light text-gray-800 mb-2 text-sm sm:text-base">Office Location</h5>
-                      <p className="text-gray-600 text-sm sm:text-base">1287 Maplewood Drive<br />Los Angeles, CA 90026</p>
+                      <div className="font-medium text-gray-900 text-sm sm:text-base">Office Location</div>
+                      <div className="text-gray-600 text-sm sm:text-base">1287 Maplewood Drive</div>
+                      <div className="text-gray-600 text-sm sm:text-base">Los Angeles, CA 90026</div>
+                    </div>
+                    </b>
+                  </div>
+
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <Phone className="text-teal-600 h-5 w-5 sm:h-6 sm:w-6 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <div className="font-medium text-gray-900 text-sm sm:text-base">Phone</div>
+                     <b> <a href="tel:+13235550192" className="text-teal-600 text-primary hover:underline text-sm sm:text-base">
+                        (323) 555-0192
+                      </a>
+                      </b>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4 sm:space-x-6">
-                    <div className="bg-teal-100 p-2 sm:p-3 rounded-full flex-shrink-0">
-                      <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600" />
-                    </div>
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <Mail className="text-teal-600 h-5 w-5 sm:h-6 sm:w-6 text-primary mt-1 flex-shrink-0" />
+                   <b>
                     <div>
-                      <h5 className="font-light text-gray-800 mb-2 text-sm sm:text-base">Phone</h5>
-                      <p className="text-gray-600 text-sm sm:text-base">(323) 555-0192</p>
+                      <div className=" font-medium text-gray-900 text-sm sm:text-base">Email</div>
+                      <a href="mailto:serena@blakepsychology.com" className="text-teal-600 text-primary hover:underline text-sm sm:text-base break-all">
+                        serena@blakepsychology.com
+                      </a>
                     </div>
+                    </b>
                   </div>
 
-                  <div className="flex items-start space-x-4 sm:space-x-6">
-                    <div className="bg-teal-100 p-2 sm:p-3 rounded-full flex-shrink-0">
-                      <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600" />
-                    </div>
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <Clock className="text-teal-600 h-5 w-5 sm:h-6 sm:w-6 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h5 className="font-light text-gray-800 mb-2 text-sm sm:text-base">Email</h5>
-                      <p className="text-gray-600 text-sm sm:text-base break-all">serena@blakepsychology.com</p>
+                      <div className="font-medium text-gray-900 text-sm sm:text-base">Office Hours</div>
+                      <div className="text-gray-600 space-y-1 text-sm sm:text-base">
+                        <div>In-person: Tue & Thu, 10 AM–6 PM</div>
+                        <div>Virtual: Mon, Wed & Fri, 1 PM–5 PM</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-teal-50 p-6 sm:p-8">
-                <h5 className="font-light text-gray-800 mb-4 text-base sm:text-lg">Free Consultation</h5>
-                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                  I offer a complimentary 15-minute consultation to discuss your needs 
-                  and determine if we're a good fit for working together.
+              <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-lg">
+                <h4 className="font-medium text-gray-900 mb-3 text-sm sm:text-base">Free Consultation</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">
+                  Not sure if therapy is right for you? Schedule a complimentary 15-minute consultation to discuss your needs and learn more about my approach.
                 </p>
               </div>
+            </div>
             </div>
 
             {/* Contact Form */}
@@ -491,7 +574,9 @@ Compassionate, evidence-based therapy in Los Angeles
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                   <div>
-                    <Label htmlFor="name" className="text-gray-700 font-light text-sm sm:text-base">Name *</Label>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
                     <Input
                       id="name"
                       value={formData.name}
@@ -503,7 +588,9 @@ Compassionate, evidence-based therapy in Los Angeles
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-gray-700 font-light text-sm sm:text-base">Phone *</Label>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number *
+                  </label>
                     <Input
                       id="phone"
                       value={formData.phone}
@@ -515,7 +602,9 @@ Compassionate, evidence-based therapy in Los Angeles
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-gray-700 font-light text-sm sm:text-base">Email *</Label>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
                     <Input
                       id="email"
                       type="email"
@@ -528,7 +617,9 @@ Compassionate, evidence-based therapy in Los Angeles
                   </div>
 
                   <div>
-                    <Label htmlFor="message" className="text-gray-700 font-light text-sm sm:text-base">What brings you here? *</Label>
+                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    What brings you here? *
+                  </label>
                     <Textarea
                       id="message"
                       value={formData.message}
@@ -541,7 +632,9 @@ Compassionate, evidence-based therapy in Los Angeles
                   </div>
 
                   <div>
-                    <Label htmlFor="preferredTime" className="text-gray-700 font-light text-sm sm:text-base">Preferred time to reach you *</Label>
+                     <label className="block text-sm font-medium text-gray-700 mb-3">
+                    Preferred Contact Method *
+                  </label>
                     <Input
                       id="preferredTime"
                       value={formData.preferredTime}
@@ -552,7 +645,7 @@ Compassionate, evidence-based therapy in Los Angeles
                     {errors.preferredTime && <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.preferredTime}</p>}
                   </div>
 
-                  <div className="flex items-start space-x-3">
+                  {/* <div className="flex items-start space-x-3">
                     <Checkbox
                       id="agreeToContact"
                       checked={formData.agreeToContact}
@@ -564,7 +657,21 @@ Compassionate, evidence-based therapy in Los Angeles
                       that this form is not for emergency situations. *
                     </Label>
                   </div>
-                  {errors.agreeToContact && <p className="text-red-500 text-xs sm:text-sm">{errors.agreeToContact}</p>}
+                  {errors.agreeToContact && <p className="text-red-500 text-xs sm:text-sm">{errors.agreeToContact}</p>} */}
+                  <div className="flex items-start space-x-3">
+                  <div className="flex-shrink-0 mt-1">
+                    <Checkbox
+                      id="agreeToContact"
+                      checked={formData.agreeToContact}
+                      onCheckedChange={(checked) => handleInputChange("agreeToContact", checked as boolean)}
+                      className={errors.agreeToContact ? "border-red-500" : ""}
+                    />
+                  </div>
+                  <label htmlFor="agreeToContact" className="text-sm text-gray-600 leading-relaxed">
+                    I agree to be contacted by Dr. Serena Blake regarding my inquiry and understand that this form is not secure for sharing sensitive information. *
+                  </label>
+                </div>
+                {errors.agreeToContact && <p className="text-red-500 text-sm">{errors.agreeToContact}</p>}
 
                   <Button 
                     type="submit" 
