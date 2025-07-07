@@ -661,11 +661,15 @@ Compassionate, evidence-based therapy in Los Angeles
                   {errors.agreeToContact && <p className="text-red-500 text-xs sm:text-sm">{errors.agreeToContact}</p>} */}
                   <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 mt-1">
-                    <Checkbox
+                   <Checkbox
                       id="agreeToContact"
                       checked={formData.agreeToContact}
                       onCheckedChange={(checked) => handleInputChange("agreeToContact", checked as boolean)}
-                      className={errors.agreeToContact ? "border-red-500" : ""}
+                      // className={errors.agreeToContact ? "border-red-500 " : ""}
+                       className={`border-2 rounded-md transition-colors duration-200
+    ${errors.agreeToContact ? "border-red-500" : "border-gray-300"}
+    data-[state=checked]:bg-teal-500 data-[state=checked]:border-teal-600
+  `}
                     />
                   </div>
                   <label htmlFor="agreeToContact" className="text-sm text-gray-600 leading-relaxed">
