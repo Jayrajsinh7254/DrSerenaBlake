@@ -260,11 +260,11 @@ Compassionate, evidence-based therapy in Los Angeles
              <div className="grid grid-cols-2 gap-6 sm:gap-8 pt-6 sm:pt-8">
                 <div className="text-center">
                   <div className="text-xl sm:text-2xl font-bold text-gray-900">8+</div>
-                  <div className="text-xl sm:text-1xl font-normal text-gray-900">Years Experience</div>
+                  <div className="text-xl sm:text-1xl font-light text-gray-900">Years Experience</div>
                 </div>
                 <div className="text-center">
                   <div className="text-xl sm:text-2xl font-bold text-gray-900">500+</div>
-                  <div className="text-xl sm:text-1xl font-normal text-gray-900">Client Sessions</div>
+                  <div className="text-xl sm:text-1xl font-light text-gray-900">Client Sessions</div>
                 </div>
                 
               </div>
